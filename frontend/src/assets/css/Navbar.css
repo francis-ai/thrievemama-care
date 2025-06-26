@@ -1,0 +1,178 @@
+/* Navbar styles */
+.navbar {
+    background-color: #F4F4F4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .logo {
+    display: flex;
+    margin: 0px;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: #0E3B31;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 7px 14px;
+    border-radius: 0px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+  }
+  
+  .login-btn {
+    background:#fff;
+    border:1px solid #dd700a;
+    color:#dd700a;
+  }
+  
+  .signup-btn {
+    background-color: #648E87;
+    color: #fff;
+    margin-left: 10px;
+    border: 2px solid #648E87;
+  }
+  
+  .nav-buttons .signup-btn:hover {
+    background: #597f79; 
+  }
+  .nav-buttons .login-btn:hover {
+    background: #dd700a;
+    color:#fff;
+  }
+  /* Mobile responsiveness */
+  .mobile-toggle {
+    display: none;
+    font-size: 24px;
+    color: #0E3B31;
+    cursor: pointer;
+  }
+  
+  .navbar.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #F4F4F4;
+    padding: 20px;
+    gap: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar.open .mobile-toggle {
+    display: block;
+  }
+  /* Drop Down */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-user-btn {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  .nav-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-user-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    z-index: 1;
+    flex-direction: column;
+  }
+
+  .nav-dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown-content a,
+  .dropdown-content button {
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #333;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-content a:hover,
+  .dropdown-content button:hover {
+    background-color: #f5f5f5;
+  }
+
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      margin-top:10px;
+    }
+  
+    .mobile-toggle {
+      display: block;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
